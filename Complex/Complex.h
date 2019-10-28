@@ -94,7 +94,7 @@ public:
 	// cin, cout
 	friend ostream& operator<<(ostream &stream, MyComplex &c)
 	{
-		stream << std::defaultfloat << "(" << c.GetRe() << (c.GetIm() > 0 ? "+" : "") << c.GetIm() << "i)";
+		stream << std::defaultfloat << "(" << c.GetRe() << (c.GetIm() >= 0 ? "+" : "") << c.GetIm() << "i)";
 		return stream;
 	}
 	friend istream& operator>>(istream &stream, MyComplex &c)
